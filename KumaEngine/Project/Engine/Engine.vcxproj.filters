@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Default">
+      <UniqueIdentifier>{fd77f4ae-1f1c-40bd-8315-dbede5f3b4d2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="01. Header">
+      <UniqueIdentifier>{42913fb2-c1ca-46fc-b5b5-a3e0fd38c988}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="00. Window">
+      <UniqueIdentifier>{d8f7ea0a-0a08-4c95-885e-d985bcd6e23a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="02.Engine">
+      <UniqueIdentifier>{709250dd-ac7d-45e3-896e-c0a13155ce30}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="framework.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="pch.h">
+      <Filter>Default</Filter>
+    </ClInclude>
+    <ClInclude Include="singleton.h">
+      <Filter>01. Header</Filter>
+    </ClInclude>
+    <ClInclude Include="define.h">
+      <Filter>01. Header</Filter>
+    </ClInclude>
+    <ClInclude Include="CommonIncludes.h">
+      <Filter>01. Header</Filter>
+    </ClInclude>
+    <ClInclude Include="App.h">
+      <Filter>00. Window</Filter>
+    </ClInclude>
+    <ClInclude Include="Window.h">
+      <Filter>00. Window</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineCore.h">
+      <Filter>02.Engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Default</Filter>
+    </ClCompile>
+    <ClCompile Include="pch.cpp">
+      <Filter>Default</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineGlobals.h">
+      <Filter>01. Header</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineGlobals.cpp">
+      <Filter>01. Header</Filter>
+    </ClCompile>
+    <ClCompile Include="App.cpp">
+      <Filter>00. Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Window.cpp">
+      <Filter>00. Window</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineCore.cpp">
+      <Filter>02.Engine</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
