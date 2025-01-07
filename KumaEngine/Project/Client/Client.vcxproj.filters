@@ -40,8 +40,10 @@
     </Image>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Client.cpp" />
     <ClCompile Include="pch.cpp">
+      <Filter>Default</Filter>
+    </ClCompile>
+    <ClCompile Include="Client.cpp">
       <Filter>Default</Filter>
     </ClCompile>
   </ItemGroup>

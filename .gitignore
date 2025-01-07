@@ -3,6 +3,10 @@
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
+KumaEngine/KumaEngine/External/External/Library/Engine/
+KumaEngine/KumaEngine/OutputFile/bin/
+KumaEngine/KumaEngine/OutputFile/build/
+
 # User-specific files
 *.rsuser
 *.suo
