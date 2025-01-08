@@ -11,6 +11,5 @@
 #include "framework.h"
 
 #include "CommonIncludes.h"
-#include "EngineGlobals.h"
 
 #endif //PCH_H

@@ -9,7 +9,12 @@ public:
 	CApp(HINSTANCE _hInstance);
 	~CApp();
 
-	int Run(int _CmdShow);
+	void Run(int _CmdShow);
+
+private:
+	void Init(int _CmdShow);
+	void Tick();
+	void Release();
 
 private:
 	HINSTANCE					m_hInstance;

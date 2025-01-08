@@ -20,12 +20,39 @@ CApp::~CApp()
 	GWindow = nullptr;
 }
 
-int CApp::Run(int _CmdShow)
+void CApp::Run(int _CmdShow)
 {
-	if (m_Window->Create(1280, 720, _CmdShow))
+	Init(_CmdShow);
+	Tick();
+	Release();
+}
+
+void CApp::Init(int _CmdShow)
+{
+	m_Window->Create(1280, 720, _CmdShow);
+}
+
+void CApp::Tick()
+{
+	MSG msg;
+
+	while (true)
 	{
-		return m_Window->Tick();
+		if (PeekMessage(&msg, nullptr, 0, 0, PM_REMOVE))
+		{
+			if (msg.message == WM_QUIT)
+				break;
+
+			TranslateMessage(&msg);
+			DispatchMessage(&msg);
+		}
+		else
+		{
+			GEngine->Tick();
+		}
 	}
-	
-	return FALSE;
+}
+
+void CApp::Release()
+{
 }

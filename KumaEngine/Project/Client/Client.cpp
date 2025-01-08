@@ -10,6 +10,8 @@
 #include "Client.h"
 
 #include <Engine/App.h>
+#include <Engine/Window.h>
+#include <dwmapi.h>
 
 int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_opt_ HINSTANCE hPrevInstance,
@@ -17,5 +19,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_ int       nCmdShow)
 {
     CApp KumaEngine(hInstance);
-    return KumaEngine.Run(nCmdShow);
+    KumaEngine.Run(nCmdShow);
+
+    return 0;
 }

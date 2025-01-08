@@ -39,6 +39,9 @@
     <ClInclude Include="EngineCore.h">
       <Filter>02.Engine</Filter>
     </ClInclude>
+    <ClInclude Include="EngineGlobals.h">
+      <Filter>01. Header</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -46,9 +49,6 @@
     </ClCompile>
     <ClCompile Include="pch.cpp">
       <Filter>Default</Filter>
-    </ClCompile>
-    <ClCompile Include="EngineGlobals.h">
-      <Filter>01. Header</Filter>
     </ClCompile>
     <ClCompile Include="EngineGlobals.cpp">
       <Filter>01. Header</Filter>
