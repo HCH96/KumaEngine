@@ -1,5 +1,7 @@
 #pragma once
 
+#define DEVICE GDevice->GetDevice()
+#define CONTEXT GDevice->GetContext()
 
 #define SINGLETON(classtype)			\
 private:								\

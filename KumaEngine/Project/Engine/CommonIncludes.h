@@ -8,13 +8,16 @@
 #pragma comment(lib, "DirectXTK\\DirectXTK.lib")
 #endif
 
+// DirectX 11
+#pragma comment(lib, "d3d11")
+#pragma comment(lib, "d3dcompiler")
+
 // Window TitleBar
 #pragma comment(lib, "dwmapi.lib")
 
 // ====================== Window ======================
 #include <Windows.h>
 #include <dwmapi.h>
-#define _CRTDBG_MAP_ALLOC
 #include <crtdbg.h>
 
 // ================== 표준 라이브러리 ==================
@@ -50,6 +53,16 @@ using std::wstring;
 
 // ===================== Direct X =====================
 
+// Comptr
+#include <wrl.h>
+using namespace Microsoft::WRL;
+
+// Directx 11
+#include <d3d11.h>
+#include <d3dcompiler.h>
+#include <DirectXMath.h>
+using namespace DirectX;
+
 // SimpleMath
 #include <DirectXTK/SimpleMath.h>
 using namespace DirectX::SimpleMath;
@@ -58,7 +71,6 @@ typedef Vector2 Vec2;
 typedef Vector3 Vec3;
 typedef Vector4 Vec4;
 typedef Quaternion Quat;
-
 
 // ===================== 엔진 헤더 참조 =====================
 #include "EngineGlobals.h"

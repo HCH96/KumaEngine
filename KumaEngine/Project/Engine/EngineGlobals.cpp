@@ -1,5 +1,7 @@
 #include "pch.h"
 #include "EngineGlobals.h"
 
-CEngineCore* GEngine = nullptr;
 CWindow* GWindow = nullptr;
+
+CEngineCore* GEngine = nullptr;
+CDevice* GDevice = nullptr;

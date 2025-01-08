@@ -1,15 +1,18 @@
 #pragma once
 
+class CDevice;
+
 class CEngineCore
 {
 public:
 	CEngineCore();
 	~CEngineCore();
 
-	void Init();
+	int Init();
 	void Tick();
 
-
 private:
+	unique_ptr<CDevice> m_Device;
+
 };
 

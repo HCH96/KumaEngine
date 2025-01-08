@@ -10,8 +10,11 @@
     <Filter Include="00. Window">
       <UniqueIdentifier>{d8f7ea0a-0a08-4c95-885e-d985bcd6e23a}</UniqueIdentifier>
     </Filter>
-    <Filter Include="02.Engine">
+    <Filter Include="02. Engine">
       <UniqueIdentifier>{709250dd-ac7d-45e3-896e-c0a13155ce30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="03. Device">
+      <UniqueIdentifier>{0b17cfd2-8118-4d8d-9ae8-7dec7bd94635}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -37,10 +40,13 @@
       <Filter>00. Window</Filter>
     </ClInclude>
     <ClInclude Include="EngineCore.h">
-      <Filter>02.Engine</Filter>
+      <Filter>02. Engine</Filter>
     </ClInclude>
     <ClInclude Include="EngineGlobals.h">
       <Filter>01. Header</Filter>
+    </ClInclude>
+    <ClInclude Include="Device.h">
+      <Filter>03. Device</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -60,7 +66,10 @@
       <Filter>00. Window</Filter>
     </ClCompile>
     <ClCompile Include="EngineCore.cpp">
-      <Filter>02.Engine</Filter>
+      <Filter>02. Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Device.cpp">
+      <Filter>03. Device</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
