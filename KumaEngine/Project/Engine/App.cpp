@@ -29,7 +29,15 @@ void CApp::Run(int _CmdShow)
 
 void CApp::Init(int _CmdShow)
 {
+	// 메모리 누수 체크
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
+	//_CrtSetBreakAlloc(231);
+
+	// Window 생성
 	m_Window->Create(1280, 720, _CmdShow);
+
+	// Engine 초기화
+	m_Engine->Init();
 }
 
 void CApp::Tick()

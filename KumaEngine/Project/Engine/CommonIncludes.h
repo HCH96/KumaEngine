@@ -14,6 +14,8 @@
 // ====================== Window ======================
 #include <Windows.h>
 #include <dwmapi.h>
+#define _CRTDBG_MAP_ALLOC
+#include <crtdbg.h>
 
 // ================== 표준 라이브러리 ==================
 
@@ -60,3 +62,4 @@ typedef Quaternion Quat;
 
 // ===================== 엔진 헤더 참조 =====================
 #include "EngineGlobals.h"
+#include "define.h"
