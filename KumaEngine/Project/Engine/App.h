@@ -9,11 +9,11 @@ public:
 	CApp(HINSTANCE _hInstance);
 	~CApp();
 
-	HRESULT Run();
+	int Run(int _CmdShow);
 
 private:
-	HINSTANCE m_hInstance;
-	CWindow* m_Window;
-	CEngineCore* m_Engine;
+	HINSTANCE					m_hInstance;
+	unique_ptr<CWindow>			m_Window;
+	unique_ptr<CEngineCore>		m_Engine;
 };
 

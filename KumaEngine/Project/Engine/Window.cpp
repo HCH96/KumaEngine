@@ -1,8 +1,8 @@
 #include "pch.h"
 #include "Window.h"
 
-CWindow::CWindow(HINSTANCE _hInstance, const wstring& _ClassName, const wstring& Title)
-    : m_hInstance(_hInstance), m_ClassName(_ClassName), m_Title(Title), m_hWnd(nullptr) 
+CWindow::CWindow(HINSTANCE _hInstance, const wstring& _ClassName, const wstring& _Title)
+    : m_hInstance(_hInstance), m_ClassName(_ClassName), m_Title(_Title), m_hWnd(nullptr) 
 {
     RegisterWndClass();
 }
@@ -34,13 +34,13 @@ void CWindow::RegisterWndClass()
     RegisterClassExW(&wcex);
 }
 
-bool CWindow::Create(int Width, int Height, int CmdShow) 
+bool CWindow::Create(int _Width, int _Height, int _CmdShow) 
 {
     m_hWnd = CreateWindowW(
         m_ClassName.c_str(), m_Title.c_str(),
         WS_OVERLAPPEDWINDOW,
         CW_USEDEFAULT, CW_USEDEFAULT,
-        Width, Height,
+        _Width, _Height,
         nullptr, nullptr, m_hInstance, nullptr
     );
 
@@ -49,18 +49,18 @@ bool CWindow::Create(int Width, int Height, int CmdShow)
         return false;
     }
 
-    Show(CmdShow);
+    Show(_CmdShow);
 
     return true;
 }
 
-void CWindow::Show(int CmdShow) 
+void CWindow::Show(int _CmdShow) 
 {
-    ShowWindow(m_hWnd, CmdShow);
+    ShowWindow(m_hWnd, _CmdShow);
     UpdateWindow(m_hWnd);
 }
 
-void CWindow::Update() 
+int CWindow::Tick()
 {
     MSG msg;
 
@@ -68,6 +68,8 @@ void CWindow::Update()
         TranslateMessage(&msg);
         DispatchMessage(&msg);
     }
+
+    return (int)msg.wParam;
 }
 
 HWND CWindow::GetHandle() const 

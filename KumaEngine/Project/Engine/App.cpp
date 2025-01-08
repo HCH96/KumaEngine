@@ -7,20 +7,25 @@
 CApp::CApp(HINSTANCE _hInstance)
 	: m_hInstance(_hInstance)
 {
+	m_Engine = make_unique<CEngineCore>();
+	m_Window = make_unique<CWindow>(_hInstance, L"KumaEngine", L"KumaEngine");
+
+	GEngine = m_Engine.get();
+	GWindow = m_Window.get();
 }
 
 CApp::~CApp()
 {
+	GEngine = nullptr;
+	GWindow = nullptr;
 }
 
-HRESULT CApp::Run()
+int CApp::Run(int _CmdShow)
 {
-	m_Engine = new CEngineCore();
-	GEngine = m_Engine;
-
-	m_Window = new CWindow(m_hInstance, L"KumaEngine", L"KumaEngine");
-	m_Window->Create(1280, 720, SW_SHOW);
-	m_Window->Update();
-
-	return S_OK;
+	if (m_Window->Create(1280, 720, _CmdShow))
+	{
+		return m_Window->Tick();
+	}
+	
+	return FALSE;
 }

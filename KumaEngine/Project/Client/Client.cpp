@@ -17,7 +17,5 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
                      _In_ int       nCmdShow)
 {
     CApp KumaEngine(hInstance);
-    KumaEngine.Run();
-    
-    return 0;
+    return KumaEngine.Run(nCmdShow);
 }

@@ -5,8 +5,17 @@
 
 // 표준 라이브러리
 
+// Smart Pointer
 #include <memory>
 
+using std::shared_ptr;
+using std::unique_ptr;
+using std::weak_ptr;
+
+using std::make_unique;
+using std::make_shared;
+
+// 자료 구조
 #include <vector>
 #include <list>
 #include <queue>
@@ -14,8 +23,6 @@
 #include <unordered_map>
 #include <string>
 #include <stack>
-
-using std::shared_ptr;
 
 using std::hash;
 using std::list;
