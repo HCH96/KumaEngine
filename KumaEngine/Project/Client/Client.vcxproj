@@ -75,14 +75,14 @@
     <TargetName>KumaEngine_d</TargetName>
     <ExternalIncludePath>$(SolutionDir)External\Include\;$(SolutionDir)Project\;$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)External\Library\;$(LibraryPath)</LibraryPath>
-    <IntDir>$(SolutionDir)OutputFile\build\$(ProjectName)\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)Build\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <OutDir>$(SolutionDir)OutputFile\bin\</OutDir>
     <TargetName>KumaEngine</TargetName>
     <ExternalIncludePath>$(SolutionDir)External\Include\;$(SolutionDir)Project\;$(ExternalIncludePath)</ExternalIncludePath>
     <LibraryPath>$(SolutionDir)External\Library\;$(LibraryPath)</LibraryPath>
-    <IntDir>$(SolutionDir)OutputFile\build\$(ProjectName)\$(Configuration)\</IntDir>
+    <IntDir>$(SolutionDir)Build\$(ProjectName)\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Label="Vcpkg">
     <VcpkgEnabled>false</VcpkgEnabled>

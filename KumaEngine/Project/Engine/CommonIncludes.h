@@ -75,3 +75,4 @@ typedef Quaternion Quat;
 // ===================== 엔진 헤더 참조 =====================
 #include "EngineGlobals.h"
 #include "define.h"
+#include "struct.h"

@@ -16,6 +16,9 @@
     <Filter Include="03. Device">
       <UniqueIdentifier>{0b17cfd2-8118-4d8d-9ae8-7dec7bd94635}</UniqueIdentifier>
     </Filter>
+    <Filter Include="04.Manager">
+      <UniqueIdentifier>{8239299d-10c1-4478-a2f2-7beedf8f37f0}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="framework.h">
@@ -48,6 +51,13 @@
     <ClInclude Include="Device.h">
       <Filter>03. Device</Filter>
     </ClInclude>
+    <ClInclude Include="Test.h" />
+    <ClInclude Include="struct.h">
+      <Filter>01. Header</Filter>
+    </ClInclude>
+    <ClInclude Include="PathManager.h">
+      <Filter>04.Manager</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Engine.cpp">
@@ -70,6 +80,10 @@
     </ClCompile>
     <ClCompile Include="Device.cpp">
       <Filter>03. Device</Filter>
+    </ClCompile>
+    <ClCompile Include="Test.cpp" />
+    <ClCompile Include="PathManager.cpp">
+      <Filter>04.Manager</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
